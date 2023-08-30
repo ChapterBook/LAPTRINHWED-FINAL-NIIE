@@ -1,0 +1,96 @@
+* {box-sizing: border-box}
+body{
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  background-image: url('../ảnh/background.jpg');
+  background-position: center;
+}
+
+#icon{
+  position: relative;
+  width: 100%;
+  height: 92px;
+  top:0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(90deg,rgba(116, 65, 65, 0.72) 0px, rgba(31, 31, 31, 0.59) 15%,#E8CCCC, rgba(31, 31, 31, 0.59) 83.85%, rgba(116, 65, 65, 0.72) 100%);
+  text-align: center;
+  border-radius: 0px 0px 30px 30px;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+}
+#icon img{
+  height: 92px;
+}
+.intro{
+  display: flex;
+  justify-content:center; 
+  margin-top: 70px;
+  font-size: 400%;
+  position: relative;
+  font-weight: bolder;
+  height: 20px;
+  color: #e06161;
+  text-shadow:  0px 1px 0px #c91c1c, 
+  0px 2px 0px #c91c1c,
+  0px 3px 0px #c91c1c,
+  0px 4px 0px #c91c1c,
+  0px 5px 0px #c91c1c,
+  0px 6px 0px #c91c1c,
+  0px 7px 0px #c91c1c,
+  0px 8px 0px #c91c1c,
+  0px 9px 0px #c91c1c,
+  0px 10px 0px #c91c1c,
+  
+  0px 10px 5px #630909;
+}
+a{
+  text-decoration:none;
+  background-color: #ffff;
+  width: 350px;
+  height: 400px;
+  position: absolute;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  border-radius: 30px;
+  transform: scale(1) translateZ(0);
+  transition: 
+    filter 200ms linear,
+    transform 200ms linear;
+}
+.latter{
+  margin-top: -50px;
+  margin-left: -350px;
+  display: flex;
+  justify-content:center; 
+}
+a img{
+  width: 300px;
+  height: 300px;
+  border-radius: 30px;
+  margin:20px 0 0 25px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.box:hover a{
+  transform: scale(1.05) translateZ(0) rotate(2deg);
+}
+
+
+.text{
+  color: #333;
+  width: 300px;
+  height: 50px;
+  margin-top: 15px;
+  margin-left: 25px;
+  padding-left: 10px;
+  font-size: 140%;
+  font-family: inherit;
+  padding-top: 15px;
+  border-radius: 30px;
+  background: rgba(188, 90, 17, 0.20);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  text-align: center;
+}
+.box{
+  margin: 200px;
+
+}

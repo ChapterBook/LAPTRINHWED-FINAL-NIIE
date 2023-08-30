@@ -1,0 +1,300 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body {
+  height: 175vh;
+  margin: 0;
+  background-image: url("./img/1234.jpg");
+  background-size: cover; /* Đảm bảo hình ảnh nền vừa với kích thước của phần body */
+  background-repeat: no-repeat; /* Không lặp lại hình ảnh nền */
+  background-position: center; /* Căn giữa hình ảnh nền */
+}
+body .card-container{
+  display: flex;
+  place-items: center; /* Căn ngang và dọc giữa */
+}
+
+body::before {
+  margin: auto;
+  min-height: 100vh;
+  position: relative;
+  content: '';
+  position: absolute;
+  width: 100%;
+  clip-path: inset(47% 0 0 0);
+  z-index: -1;
+  height: 100%;
+}
+::selection{
+  background:    #FF676D;
+  color: #fff;
+}
+.content p {
+  font-size: 2rem;
+  margin: 10px 0;
+  color: #48bfe3; 
+  font-weight: bold;
+}
+button {
+  appearance: button;
+  background-color: orange;
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 0 4px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: .8px;
+  line-height: 20px;
+  margin: 0;
+  outline: none;
+  overflow: visible;
+  padding: 13px 19px;
+  text-align: center;
+  text-transform: uppercase;
+  touch-action: manipulation;
+  transform: translateZ(0);
+  transition: filter .2s;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+ }
+
+
+ 
+ button:after {
+  background-clip: padding-box;
+  background-color: #1CB0F6;
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 0 4px;
+  bottom: -4px;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+ }
+ 
+ button:main, button:focus {
+  user-select: auto;
+ }
+ 
+ button:hover:not(:disabled) {
+  filter: brightness(1.1);
+ }
+ 
+ button:disabled {
+  cursor: auto;
+ }
+ 
+ button:active:after {
+  border-width: 0 0 0px;
+ }
+ 
+ button:active {
+  padding-bottom: 10px;
+ }
+.row {
+display: flex;
+justify-content: center;
+}
+.logo{
+  width: 100%;
+  height: 65px;
+  background-color: #3498DB;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px; /* Khoảng cách từ viền trái và phải */
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ */
+}
+.img-logo {
+  width: 160px;
+  height: auto;
+}
+.content {
+  width: 591px;
+  height: 115px;
+  margin-left: 350px;
+  background-color: #3498DB;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  color: white;
+}
+
+.content h1 {
+  color: yellow;
+  font-size: 3rem;
+  margin: 0;
+  padding: 0;
+}
+.card-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+
+  .card-container div{
+    margin-right: 10px;
+  }
+  
+  .card {
+    background-color: transparent;
+    width: 160px;
+    height: 165px;
+    border-radius: 10px;
+    perspective: 1000px;
+    text-align: center;
+    margin: 30px;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+ 
+  
+  .card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.999s;
+  }
+  
+  .card:hover .card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .card-front,
+  .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+  }
+  
+  .card-front {
+    width: 160px;
+    height: 165px;
+    box-shadow: 0 8px 14px 0 rgba(0,0,0,0.2);
+    border-radius: 10px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .card-back {
+    width: 160px;
+    height: 165px;
+    background: linear-gradient(120deg, rgb(90 186 203) 30%, rgb(235 235 130) 88%, rgb(141, 215, 136) 40%, #e4ec91 78%);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    transform: rotateY(180deg);/
+  }
+  .tab-container {
+    overflow: hidden;
+    position: relative;
+    max-height: 300px; /* Chiều cao tối đa của vùng cuộn tablinks */
+}
+
+.tab-scroll {
+    overflow-y: scroll;
+    max-height: 100%;
+}
+  * {box-sizing: border-box}
+
+  /* Style the tab */
+  .tab {
+    float: left;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+    width: 405px;
+    height: 300px;
+  }
+  
+  /* Style the buttons that are used to open the tab content */
+  .tab span {
+    display: block;
+    background-color: inherit;
+    color: black;
+    padding: 22px 16px;
+    width: 405px;
+    border: none;
+    outline: none;
+    text-align: left;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  /* Change background color of buttons on hover */
+  .tab span:hover {
+    background-color: #ddd;
+  }
+  
+  /* Create an active/current "tab button" class */
+  .tab span.active {
+    background-color: #ccc;
+  }
+  
+  /* Style the tab content */
+  .tabcontent {
+    float: left;
+    padding: 0px 12px;
+    border: 1px solid #ccc;
+    width: 910px;
+    border-left: none;
+    height: 300px;
+  }
+  #London video {
+    width: 100%; /* Chiều rộng video */
+    height: auto; /* Chiều cao tự động điều chỉnh theo tỷ lệ */
+    max-width: 590px; /* Chiều rộng tối đa của video */
+  }
+  #Paris video {
+    width: 100%; /* Chiều rộng video */
+    height: auto; /* Chiều cao tự động điều chỉnh theo tỷ lệ */
+    max-width: 590px; /* Chiều rộng tối đa của video */
+  }
+  #Tokyo video {
+    width: 100%; /* Chiều rộng video */
+    height: auto; /* Chiều cao tự động điều chỉnh theo tỷ lệ */
+    max-width: 590px; /* Chiều rộng tối đa của video */
+  }
+  .container {
+    display: flex;
+}
+
+.tab-container {
+    flex: 1;
+    overflow: hidden;
+    max-height: 300px;
+}
+
+.video-container {
+    flex: 2;
+    overflow: hidden;
+    max-height: 360px;
+}
